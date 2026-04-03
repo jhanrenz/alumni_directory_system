@@ -14,7 +14,7 @@ function debounce(fn: (value: string) => void, delay: number) {
 
 const EventPageList = () => {
   const [search, setSearch] = useState("");
-  const [filter, setFilter] = useState<"upcoming" | "done" | "all">("upcoming");
+  const [filter, setFilter] = useState<"upcoming" | "done" | "all">("all");
 
   // 🔥 Convert "all" → undefined (para walang filter sa backend)
   const statusParam = filter === "all" ? undefined : filter;
